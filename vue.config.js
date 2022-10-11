@@ -3,4 +3,5 @@ module.exports = defineConfig({
   transpileDependencies: true,
   productionSourceMap: false,
   lintOnSave: false,
+  publicPath: "",
 });
