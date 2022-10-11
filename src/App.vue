@@ -12,16 +12,16 @@
   </div>
 </template>
 <script>
-import Toper from '@/components/index/toper'
-import Bottomer from '@/components/index/bottomer/index.vue';
+import Toper from "@/components/index/toper";
+import Bottomer from "@/components/index/bottomer/index.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Toper,
-    Bottomer
-  }
-}
+    Bottomer,
+  },
+};
 </script>
 <style lang="scss" scoped>
 .top {
@@ -33,6 +33,6 @@ export default {
 }
 
 .bot {
-  background-color: #eee;
+  background-color: #333;
 }
 </style>

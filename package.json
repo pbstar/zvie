@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./src/package/index.js --name zvie --dest zvie"
+    "package": "vue-cli-service build --target lib ./src/package/index.js --name zvie --dest zvie/lib"
   },
   "dependencies": {
     "core-js": "^3.8.3",

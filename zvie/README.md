@@ -5,7 +5,7 @@ ZVIE 是一套基于 Vue 的基础样式组件库。
 ### 安装
 
 ```
-npm i pbui-wx
+npm i zvie
 ```
 
 ### 引入

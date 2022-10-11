@@ -10,8 +10,5 @@
     "zvie"
   ],
   "author": "pengbo",
-  "license": "ISC",
-  "build": {
-    "assetsPublicPath": "./"
-  }
+  "license": "ISC"
 }
