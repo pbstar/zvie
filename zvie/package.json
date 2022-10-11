@@ -1,0 +1,15 @@
+{
+  "name": "zvie",
+  "version": "1.0.5",
+  "description": "zvie组件库",
+  "main": "zvie.common.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zvie",
+    "组件库"
+  ],
+  "author": "pengbo",
+  "license": "ISC"
+}
