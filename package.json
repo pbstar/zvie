@@ -1,6 +1,28 @@
 {
   "name": "zvie",
   "version": "0.1.0",
+  "description": "ZVIE 是一套基于 Vue 的基础样式组件库。",
+  "bugs": {
+    "qq": "24612582",
+    "email": "pbstar@sina.cn"
+  },
+  "contributors": [
+    {
+      "name": "彭勃",
+      "email": "pbstar@sina.cn"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbstar/zvie"
+  },
+  "homepage": "http://zvie.mcweb.club",
+  "keywords": [
+    "zvie",
+    "组件库"
+  ],
+  "author": "pengbo <pbstar@sina.cn>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

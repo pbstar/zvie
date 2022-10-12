@@ -1,24 +1,26 @@
-# zvie
+## ZVIE 官方文档
 
-## Project setup
-```
-npm install
-```
+ZVIE 是一套基于 Vue 的基础样式组件库。
 
-### Compiles and hot-reloads for development
+### 安装
+
 ```
-npm run serve
+npm i zvie
 ```
 
-### Compiles and minifies for production
+### 引入
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+// main.js
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+import zvie from "zvie";
+import "zvie/lib/zvie.css";
+Vue.use(zvie);
+```
+
+### 使用
+
+```
+<zvi-button></zvi-button>
+```
