@@ -2,3 +2,35 @@
   margin: 0;
   padding: 0;
 }
+
+li {
+  list-style: none;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #545c64;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #ccc;
+}
