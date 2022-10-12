@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import doc from "../views/doc/index.vue";
-import docIndex from "../views/doc/post/index.vue";
-Vue.use(VueRouter);
+import docInstall from "../views/doc/install";
+import docStart from "../views/doc/start";
+import docButton from "../views/doc/button";
 
 const routes = [
   {
@@ -14,16 +15,26 @@ const routes = [
     path: "/doc",
     name: "doc",
     component: doc,
-    redirect: "/doc/index",
+    redirect: "/doc/install",
     children: [
       {
-        path: "index",
-        name: "docIndex",
-        component: docIndex,
+        path: "install",
+        name: "docInstall",
+        component: docInstall,
+      }, {
+        path: "start",
+        name: "docStart",
+        component: docStart,
+      }, {
+        path: "button",
+        name: "docButton",
+        component: docButton,
       },
     ],
   },
 ];
+
+Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "hash",
