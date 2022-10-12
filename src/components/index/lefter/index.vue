@@ -5,6 +5,16 @@
     <router-link to="/doc/start" :class="$route.name=='docStart'?'activeLink':'link'">快速上手</router-link>
     <h4>基础组件</h4>
     <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Button 按钮</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Input 输入框</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Radio 单选框</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Checkbox 多选框</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">InputNumber 计数器</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Select 选择器</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Cascader 级联选择器</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Switch 开关</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Slider 滑块</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Rate 评分</router-link>
+    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Upload 上传</router-link>
   </div>
 </template>
 
@@ -57,14 +67,14 @@ export default {
     padding: 0 8px;
     border-radius: 5px;
     color: #0b8586;
-    background-color: #eee;
+    background-color: rgb(240, 240, 240);
     font-size: 15px;
     text-decoration: none;
   }
 
   .link:hover {
     color: #0b8586;
-    background-color: #eee;
+    background-color: rgb(246, 246, 246);
   }
 }
 </style>

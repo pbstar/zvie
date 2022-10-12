@@ -5,14 +5,14 @@
   </div>
 </template>
 <script>
-import Lefter from '@/components/index/lefter/index.vue';
+import Lefter from "@/components/index/lefter/index.vue";
 
 export default {
-  name: 'doc',
+  name: "doc",
   components: {
-    Lefter
-  }
-}
+    Lefter,
+  },
+};
 </script>
 <style lang="scss" scoped>
 .box {
@@ -21,11 +21,14 @@ export default {
   display: flex;
 
   .bleft {
-    width: 200px;
+    width: 180px;
   }
 
   .bright {
     width: 1000px;
+    padding: 30px 0 30px 20px;
+    margin-left: 20px;
+    border-left: 1px solid #eee;
   }
 }
 </style>

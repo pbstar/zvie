@@ -16,6 +16,9 @@ const routes = [
     name: "doc",
     component: doc,
     redirect: "/doc/install",
+    meta:{
+      title:"ZVIE-文档"
+    },
     children: [
       {
         path: "install",
@@ -41,5 +44,16 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+router.beforeEach((from,to,next)=>{
+  if(to.meta.title){
+    document.title = to.meta.title;
+  }else{
+    if(to.matched.length>0){
+      document.title = to.matched[0].meta.title;
+    }
+  }
+  next();
+})
 
 export default router;
