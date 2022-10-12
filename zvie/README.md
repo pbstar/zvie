@@ -9,11 +9,13 @@ npm i zvie
 ```
 
 ### 引入
-
 ```
 // main.js
+```
+
+```
 import zvie from "zvie";
-import "zvie/zvie.css";
+import "zvie/lib/zvie.css";
 Vue.use(zvie);
 ```
 

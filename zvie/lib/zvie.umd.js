@@ -25526,8 +25526,7 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: ./node_modules/element-ui/lib/element-ui.common.js
 var element_ui_common = __webpack_require__(8949);
-var element_ui_common_default = /*#__PURE__*/__webpack_require__.n(element_ui_common);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=template&id=76f80c6a&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=template&id=76f80c6a&scoped=true&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -25540,7 +25539,7 @@ var render = function render() {
 };
 var staticRenderFns = [];
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=script&lang=js&
 /* harmony default export */ var buttonvue_type_script_lang_js_ = ({
   name: "zvi-button",
   props: {
@@ -25552,12 +25551,12 @@ var staticRenderFns = [];
 });
 ;// CONCATENATED MODULE: ./src/package/button/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var package_buttonvue_type_script_lang_js_ = (buttonvue_type_script_lang_js_); 
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-64.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-64.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-64.use[2]!./node_modules/sass-loader/lib/loader.js??clonedRuleSet-64.use[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=style&index=0&id=76f80c6a&prod&lang=scss&scoped=true&
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-64.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-64.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-64.use[2]!./node_modules/sass-loader/lib/loader.js??clonedRuleSet-64.use[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=style&index=0&id=76f80c6a&prod&lang=scss&scoped=true&
 // extracted by mini-css-extract-plugin
 
 ;// CONCATENATED MODULE: ./src/package/button/index.vue?vue&type=style&index=0&id=76f80c6a&prod&lang=scss&scoped=true&
 
-;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
 // IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
@@ -25680,11 +25679,12 @@ var component = normalizeComponent(
 
 
 
+const eles = [element_ui_common.Button];
 const coms = [package_button];
-
-// 批量组件注册
 const install = function (Vue) {
-  Vue.use((element_ui_common_default()));
+  eles.forEach(ele => {
+    Vue.use(ele);
+  });
   coms.forEach(com => {
     Vue.component(com.name, com);
   });

@@ -1,15 +1,30 @@
 {
   "name": "zvie",
-  "version": "1.0.5",
-  "description": "zvie组件库",
-  "main": "zvie.common.js",
+  "version": "1.0.9",
+  "description": "ZVIE 是一套基于 Vue 的基础样式组件库。",
+  "main": "lib/zvie.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bugs": {
+    "qq": "24612582",
+    "email": "pbstar@sina.cn"
+  },
+  "contributors": [
+    {
+      "name": "彭勃",
+      "email": "pbstar@sina.cn"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbstar/zvie"
+  },
+  "homepage": "http://zvie.mcweb.club",
   "keywords": [
     "zvie",
     "组件库"
   ],
-  "author": "pengbo",
-  "license": "ISC"
+  "author": "pengbo <pbstar@sina.cn>",
+  "license": "MIT"
 }

@@ -1,16 +1,17 @@
-import ElementUI from 'element-ui';
+import { Button } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import button from "./button";
+import zButton from "./button";
 
-const coms = [button];
+const eles = [Button]
+const coms = [zButton];
 
-// 批量组件注册
 const install = function (Vue) {
-  Vue.use(ElementUI);
-  coms.forEach((com) => {
+  eles.forEach(ele => {
+    Vue.use(ele);
+  })
+  coms.forEach(com => {
     Vue.component(com.name, com);
   });
 };
-
 
 export default install;
