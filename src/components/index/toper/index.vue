@@ -1,18 +1,48 @@
 <template>
   <div class="box">
     <div class="bleft">
+      <img src="../../../assets/img/logo.png" alt="" />
       <h1>ZVIE</h1>
     </div>
     <div class="bright">
       <el-popover placement="bottom" width="220" trigger="click">
-        <div style="display: flex;flex-direction: column;height: 168px;overflow-y: auto;">
-          <router-link v-for="(item,index) in list" :key="index" :to="item.url"
-            style="color: #888;font-size: 15px;line-height: 26px;margin: 2px 5px 3px 0;padding: 3px 8px;border-radius: 5px;"
-            class="z_global_1">
-            {{item.text}}</router-link>
-          <el-empty v-show="list.length==0" description="未查询到数据" :image-size="44"></el-empty>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            height: 168px;
+            overflow-y: auto;
+          "
+        >
+          <router-link
+            v-for="(item, index) in list"
+            :key="index"
+            :to="item.url"
+            style="
+              color: #888;
+              font-size: 15px;
+              line-height: 26px;
+              margin: 2px 5px 3px 0;
+              padding: 3px 8px;
+              border-radius: 5px;
+            "
+            class="z_global_1"
+          >
+            {{ item.text }}</router-link
+          >
+          <el-empty
+            v-show="list.length == 0"
+            description="未查询到数据"
+            :image-size="44"
+          ></el-empty>
         </div>
-        <input type="text" slot="reference" placeholder="搜索文档" @input="toSearch" v-model="input" />
+        <input
+          type="text"
+          slot="reference"
+          placeholder="搜索文档"
+          @input="toSearch"
+          v-model="input"
+        />
       </el-popover>
       <router-link to="/doc/install" class="link">文档</router-link>
       <span>博客</span>
@@ -21,25 +51,25 @@
 </template>
   
 <script>
-import { list1, list2 } from "@/assets/json/docLeftList.json"
+import { list1, list2 } from "@/assets/json/docLeftList.json";
 export default {
   name: "toper",
   data() {
     return {
       list: [],
-      input: '',
-      allList: []
-    }
+      input: "",
+      allList: [],
+    };
   },
   created() {
-    this.allList = this.allList.concat(list1).concat(list2)
-    this.list = this.allList
+    this.allList = this.allList.concat(list1).concat(list2);
+    this.list = this.allList;
   },
   methods: {
     toSearch() {
       console.log(this.input);
       if (this.input) {
-        this.list = []
+        this.list = [];
         var reg = new RegExp(this.input);
         for (var i = 0; i < this.allList.length; i++) {
           if (this.allList[i].text.match(reg)) {
@@ -47,10 +77,10 @@ export default {
           }
         }
       } else {
-        this.list = this.allList
+        this.list = this.allList;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -61,12 +91,25 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .bleft {
+    display: flex;
+    align-items: center;
+    h1 {
+      color: #555;
+    }
 
+    img {
+      width: 46px;
+      height: 46px;
+      margin-right: 8px;
+    }
+  }
   .bright {
     display: flex;
     align-items: center;
 
     span {
+      color: #555;
       margin-left: 30px;
     }
 
