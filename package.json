@@ -19,7 +19,8 @@
   "homepage": "https://pbstar.github.io/zvie/",
   "keywords": [
     "zvie",
-    "组件库"
+    "组件库",
+    "vue"
   ],
   "author": "pengbo <pbstar@sina.cn>",
   "license": "MIT",

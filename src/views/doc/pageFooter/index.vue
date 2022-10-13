@@ -1,6 +1,6 @@
 <template>
   <div class="doc">
-    <h2>快速上手</h2>
+    <h2>PageFooter</h2>
     <p class="p">本节将介绍如何在项目中使用 ZVIE。</p>
     <h3>引入 ZVIE</h3>
     <p class="p">
@@ -13,7 +13,7 @@
         import Vue from "vue"; <br />
         import App from "./App.vue"; <br />
         import zvie from "zvie"; <br />
-        import "zvie/lib/zvie.css"; <br />
+        import "zvie/zvie.css"; <br />
         Vue.config.productionTip = false;<br />
         Vue.use(zvie); <br />
         new Vue({ <br />
@@ -33,10 +33,7 @@
 </template>
 <script>
 export default {
-  name: "docStart",
+  name: "docPageFooter",
 };
 </script>
-<style lang="scss" scoped>
-
-</style>
 

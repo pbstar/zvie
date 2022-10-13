@@ -1,0 +1,76 @@
+{
+  "list1": [
+    {
+      "name": "docInstall",
+      "text": "安装",
+      "url": "/doc/install"
+    },
+    {
+      "name": "docStart",
+      "text": "快速上手",
+      "url": "/doc/start"
+    }
+  ],
+  "list2": [
+    {
+      "name": "docButton",
+      "text": "Button 按钮",
+      "url": "/doc/button"
+    },
+    {
+      "name": "docStart",
+      "text": "Input 输入框",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Radio 单选框",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Checkbox 多选框",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "InputNumber 计数器",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Select 选择器",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Cascader 级联选择器",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Switch 开关",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Slider 滑块",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Rate 评分",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docStart",
+      "text": "Upload 上传",
+      "url": "/doc/start"
+    },
+    {
+      "name": "docPageFooter",
+      "text": "PageFooter 页脚",
+      "url": "/doc/pageFooter"
+    }
+  ]
+}

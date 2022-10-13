@@ -4,6 +4,7 @@ import doc from "../views/doc/index.vue";
 import docInstall from "../views/doc/install";
 import docStart from "../views/doc/start";
 import docButton from "../views/doc/button";
+import docPageFooter from "../views/doc/pageFooter";
 
 const routes = [
   {
@@ -16,8 +17,8 @@ const routes = [
     name: "doc",
     component: doc,
     redirect: "/doc/install",
-    meta:{
-      title:"ZVIE-文档"
+    meta: {
+      title: "ZVIE-文档"
     },
     children: [
       {
@@ -32,7 +33,11 @@ const routes = [
         path: "button",
         name: "docButton",
         component: docButton,
-      },
+      }, {
+        path: "pageFooter",
+        name: "docPageFooter",
+        component: docPageFooter,
+      }
     ],
   },
 ];
@@ -45,11 +50,11 @@ const router = new VueRouter({
   routes,
 });
 
-router.beforeEach((from,to,next)=>{
-  if(to.meta.title){
+router.beforeEach((from, to, next) => {
+  if (to.meta.title) {
     document.title = to.meta.title;
-  }else{
-    if(to.matched.length>0){
+  } else {
+    if (to.matched.length > 0) {
       document.title = to.matched[0].meta.title;
     }
   }

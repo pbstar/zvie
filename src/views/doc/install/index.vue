@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="doc">
     <h2>安装</h2>
     <p class="p">请使用推荐的方式进行资源包的安装。</p>
     <h3>npm 安装</h3>
@@ -21,27 +21,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.code {
-  background-color: #eee;
-  padding: 10px;
-  font-family: monospace;
-  font-size: 14px;
-  line-height: 28px;
-  margin-bottom: 20px;
-}
-h2 {
-  margin-bottom: 16px;
-}
-h3 {
-  margin-bottom: 10px;
-}
-.p {
-  font-size: 15px;
-  line-height: 26px;
-  margin-bottom: 20px;
-  color: #666;
-}
-a {
-  color: #0b8586;
-}
+
 </style>

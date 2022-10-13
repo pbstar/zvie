@@ -1,37 +1,23 @@
 <template>
   <div class="box">
     <h4>开发指南</h4>
-    <router-link to="/doc/install" :class="$route.name=='docInstall'?'activeLink':'link'">安装</router-link>
-    <router-link to="/doc/start" :class="$route.name=='docStart'?'activeLink':'link'">快速上手</router-link>
+    <router-link v-for="(item,index) in list1" :key="index+'l1'" :to="item.url"
+      :class="$route.name==item.name?'activeLink':'link'">{{item.text}}</router-link>
     <h4>基础组件</h4>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Button 按钮</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Input 输入框</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Radio 单选框</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Checkbox 多选框</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">InputNumber 计数器</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Select 选择器</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Cascader 级联选择器</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Switch 开关</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Slider 滑块</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Rate 评分</router-link>
-    <router-link to="/doc/button" :class="$route.name=='docButton'?'activeLink':'link'">Upload 上传</router-link>
+    <router-link v-for="(item,index) in list2" :key="index+'l2'" :to="item.url"
+      :class="$route.name==item.name?'activeLink':'link'">{{item.text}}</router-link>
   </div>
 </template>
 
 <script>
+import { list1, list2 } from "@/assets/json/docLeftList.json"
 export default {
   name: 'lefter',
-  props: {
-    msg: {
-      type: String,
-      default: ''
-    }
-  },
   data() {
     return {
+      list1,
+      list2
     }
-  },
-  created() {
   }
 }
 </script>
@@ -43,10 +29,11 @@ export default {
 
   h4 {
     border-bottom: 1px solid #eee;
-    height: 60px;
-    line-height: 60px;
+    height: 50px;
+    line-height: 50px;
     color: #666;
     font-weight: 400;
+    margin-top: 10px;
   }
 
   .link {
