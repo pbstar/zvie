@@ -18,52 +18,52 @@
       "url": "/doc/button"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Input 输入框",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Radio 单选框",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Checkbox 多选框",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "InputNumber 计数器",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Select 选择器",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Cascader 级联选择器",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Switch 开关",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Slider 滑块",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Rate 评分",
       "url": "/doc/start"
     },
     {
-      "name": "docStart",
+      "name": "docInput",
       "text": "Upload 上传",
       "url": "/doc/start"
     },

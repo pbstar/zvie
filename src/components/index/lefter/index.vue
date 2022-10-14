@@ -53,14 +53,14 @@ export default {
     margin-top: 6px;
     padding: 0 8px;
     border-radius: 5px;
-    color: #0b8586;
+    color: #41B784;
     background-color: rgb(240, 240, 240);
     font-size: 15px;
     text-decoration: none;
   }
 
   .link:hover {
-    color: #0b8586;
+    color: #41B784;
     background-color: rgb(246, 246, 246);
   }
 }

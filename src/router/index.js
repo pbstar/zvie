@@ -18,7 +18,7 @@ const routes = [
     component: doc,
     redirect: "/doc/install",
     meta: {
-      title: "ZVIE-文档"
+      title: "Zvie-文档"
     },
     children: [
       {

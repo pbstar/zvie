@@ -2,47 +2,28 @@
   <div class="box">
     <div class="bleft">
       <img src="../../../assets/img/logo.png" alt="" />
-      <h1>ZVIE</h1>
+      <h1>Zvie</h1>
     </div>
     <div class="bright">
       <el-popover placement="bottom" width="220" trigger="click">
-        <div
-          style="
+        <div style="
             display: flex;
             flex-direction: column;
             height: 168px;
             overflow-y: auto;
-          "
-        >
-          <router-link
-            v-for="(item, index) in list"
-            :key="index"
-            :to="item.url"
-            style="
+          ">
+          <router-link v-for="(item, index) in list" :key="index" :to="item.url" style="
               color: #888;
               font-size: 15px;
               line-height: 26px;
               margin: 2px 5px 3px 0;
               padding: 3px 8px;
               border-radius: 5px;
-            "
-            class="z_global_1"
-          >
-            {{ item.text }}</router-link
-          >
-          <el-empty
-            v-show="list.length == 0"
-            description="未查询到数据"
-            :image-size="44"
-          ></el-empty>
+            " class="z_global_1">
+            {{ item.text }}</router-link>
+          <el-empty v-show="list.length == 0" description="未查询到数据" :image-size="44"></el-empty>
         </div>
-        <input
-          type="text"
-          slot="reference"
-          placeholder="搜索文档"
-          @input="toSearch"
-          v-model="input"
-        />
+        <input type="text" slot="reference" placeholder="搜索文档" @input="toSearch" v-model="input" />
       </el-popover>
       <router-link to="/doc/install" class="link">文档</router-link>
       <span>博客</span>
@@ -91,9 +72,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .bleft {
     display: flex;
     align-items: center;
+
     h1 {
       color: #555;
     }
@@ -104,6 +87,7 @@ export default {
       margin-right: 8px;
     }
   }
+
   .bright {
     display: flex;
     align-items: center;
@@ -117,16 +101,16 @@ export default {
       width: 220px;
       height: 35px;
       border: 1px solid #ddd;
-      padding: 0 10px;
+      padding: 1px 10px 0;
       border-radius: 8px;
       font-size: 14px;
       color: #666;
-      line-height: 37px;
+      line-height: 35px;
       box-sizing: border-box;
     }
 
     .link {
-      color: #0b8586;
+      color: #41B784;
       margin-left: 30px;
     }
   }

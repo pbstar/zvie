@@ -1,7 +1,7 @@
 {
   "name": "zvie",
   "version": "1.0.9",
-  "description": "ZVIE 是一套基于 Vue 的基础样式组件库。",
+  "description": "Zvie 是一套基于 Vue 的基础样式组件库。",
   "main": "lib/zvie.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
