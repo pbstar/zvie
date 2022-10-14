@@ -1,14 +1,14 @@
 <template>
   <div>
-    <zvi-botton></zvi-botton>
+    <zvi-botton>默认</zvi-botton>
   </div>
 </template>
 <script>
-import zviBotton from '@/package/button'
+import zviBotton from "@/package/button";
 export default {
-  name: 'docButton',
+  name: "docButton",
   components: {
-    zviBotton
-  }
-}
+    zviBotton,
+  },
+};
 </script>

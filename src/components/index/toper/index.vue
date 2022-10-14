@@ -6,27 +6,53 @@
     </div>
     <div class="bright">
       <el-popover placement="bottom" width="220" trigger="click">
-        <div style="
+        <div
+          style="
             display: flex;
             flex-direction: column;
             height: 168px;
             overflow-y: auto;
-          ">
-          <router-link v-for="(item, index) in list" :key="index" :to="item.url" style="
+          "
+        >
+          <router-link
+            v-for="(item, index) in list"
+            :key="index"
+            :to="item.url"
+            style="
               color: #888;
               font-size: 15px;
               line-height: 26px;
               margin: 2px 5px 3px 0;
               padding: 3px 8px;
               border-radius: 5px;
-            " class="z_global_1">
-            {{ item.text }}</router-link>
-          <el-empty v-show="list.length == 0" description="未查询到数据" :image-size="44"></el-empty>
+            "
+            class="z_global_1"
+          >
+            {{ item.text }}</router-link
+          >
+          <el-empty
+            v-show="list.length == 0"
+            description="未查询到数据"
+            :image-size="44"
+          ></el-empty>
         </div>
-        <input type="text" slot="reference" placeholder="搜索文档" @input="toSearch" v-model="input" />
+        <input
+          v-show="pName == 'doc'"
+          type="text"
+          slot="reference"
+          placeholder="搜索文档"
+          @input="toSearch"
+          v-model="input"
+        />
       </el-popover>
-      <router-link to="/doc/install" class="link">文档</router-link>
-      <span>博客</span>
+      <router-link
+        to="/doc/install"
+        :class="pName == 'doc' ? 'activeLink' : 'link'"
+        >文档</router-link
+      >
+      <router-link to="/blog" :class="pName == 'blog' ? 'activeLink' : 'link'"
+        >博客</router-link
+      >
     </div>
   </div>
 </template>
@@ -40,7 +66,25 @@ export default {
       list: [],
       input: "",
       allList: [],
+      pName: "",
     };
+  },
+  watch: {
+    $route: {
+      handler: function (to) {
+        if (to.matched.length > 0) {
+          this.pName = to.matched[0].name;
+        }
+        if (to.meta.title) {
+          document.title = to.meta.title;
+        } else {
+          if (to.matched.length > 0 && to.matched[0].meta.title) {
+            document.title = to.matched[0].meta.title;
+          }
+        }
+      },
+      immediate: true,
+    },
   },
   created() {
     this.allList = this.allList.concat(list1).concat(list2);
@@ -92,11 +136,6 @@ export default {
     display: flex;
     align-items: center;
 
-    span {
-      color: #555;
-      margin-left: 30px;
-    }
-
     input {
       width: 220px;
       height: 35px;
@@ -110,8 +149,12 @@ export default {
     }
 
     .link {
-      color: #41B784;
+      color: #555;
       margin-left: 30px;
+    }
+    .activeLink {
+      margin-left: 30px;
+      color: #0cb56c;
     }
   }
 }

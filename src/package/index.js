@@ -1,9 +1,10 @@
 import { Button } from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import '@/assets/css/zvie.css';
 import zButton from "./button";
+import zInput from "./input";
 
 const eles = [Button]
-const coms = [zButton];
+const coms = [zButton,zInput];
 
 const install = function (Vue) {
   eles.forEach(ele => {
