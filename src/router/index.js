@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import doc from "../views/doc";
 import docInstall from "../views/doc/install";
-import docStart from "../views/doc/start";
+import docIntroduce from "../views/doc/introduce";
 import docButton from "../views/doc/button";
 import docInput from "../views/doc/input";
 import docPageFooter from "../views/doc/pageFooter";
@@ -29,9 +29,9 @@ const routes = [
         name: "docInstall",
         component: docInstall,
       }, {
-        path: "start",
-        name: "docStart",
-        component: docStart,
+        path: "introduce",
+        name: "docIntroduce",
+        component: docIntroduce,
       }, {
         path: "button",
         name: "docButton",

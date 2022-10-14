@@ -2,13 +2,13 @@
   "list1": [
     {
       "name": "docInstall",
-      "text": "安装",
+      "text": "安装使用",
       "url": "/doc/install"
     },
     {
-      "name": "docStart",
-      "text": "快速上手",
-      "url": "/doc/start"
+      "name": "docIntroduce",
+      "text": "引入使用",
+      "url": "/doc/introduce"
     }
   ],
   "list2": [
