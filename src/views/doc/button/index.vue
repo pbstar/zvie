@@ -1,6 +1,6 @@
 <template>
   <div>
-    <zvi-botton>默认</zvi-botton>
+    <zvi-botton icon="zvi-icon-edit">默认</zvi-botton>
   </div>
 </template>
 <script>

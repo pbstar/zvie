@@ -2,12 +2,12 @@
   "list1": [
     {
       "name": "docInstall",
-      "text": "安装使用",
+      "text": "Npm 安装",
       "url": "/doc/install"
     },
     {
       "name": "docIntroduce",
-      "text": "引入使用",
+      "text": "Cdn 引入",
       "url": "/doc/introduce"
     }
   ],

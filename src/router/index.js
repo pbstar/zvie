@@ -6,8 +6,10 @@ import docIntroduce from "../views/doc/introduce";
 import docButton from "../views/doc/button";
 import docInput from "../views/doc/input";
 import docPageFooter from "../views/doc/pageFooter";
+import doc404 from "../views/doc/404";
 
 import blog from "../views/blog";
+import page404 from "../views/404";
 
 const routes = [
   {
@@ -44,6 +46,10 @@ const routes = [
         path: "pageFooter",
         name: "docPageFooter",
         component: docPageFooter,
+      },{
+        path: "*",
+        name: "doc404",
+        component: doc404,
       }
     ],
   },{
@@ -52,6 +58,13 @@ const routes = [
     component: blog,
     meta: {
       title: "Zvie-博客"
+    },
+  },{
+    path: "*",
+    name: "page404",
+    component: page404,
+    meta: {
+      title: "Zvie-404"
     },
   }
 ];
