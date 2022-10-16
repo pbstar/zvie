@@ -21,6 +21,36 @@
       升级后受到兼容性更新的影响。锁定版本的方法请查看
       <a href="https://unpkg.com" target="blank">unpkg.com</a> 。
     </p>
+    <h3>Demo 示例</h3>
+    <p class="p">
+      通过 CDN 的方式我们可以很容易地使用 Zvie 写出一个 Demo 页面。
+    </p>
+    <div class="code">
+      <pre>
+        &lt;!DOCTYPE html>
+        &lt;html lang="en">
+        &lt;head>
+          &nbsp;&lt;meta charset="UTF-8">
+          &nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+          &nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &nbsp;&lt;title>Document&lt;/title>
+          &nbsp;&lt;link rel="stylesheet" href="https://unpkg.com/zvie/lib/zvie.css" />
+        &lt;/head>
+        &lt;body>
+          &nbsp;&lt;div id="app">
+          &nbsp;&nbsp;&lt;zvi-button type="primary">主要按钮&lt;/zvi-button>
+          &nbsp;&lt;/div>
+          &nbsp;&lt;script src="https://unpkg.com/vue@2/dist/vue.js">&lt;/script>
+          &nbsp;&lt;script src="https://unpkg.com/zvie/lib/zvie.umd.min.js">&lt;/script>
+          &nbsp;&lt;script>
+          &nbsp;&nbsp;new Vue({
+          &nbsp;&nbsp;&nbsp;el: '#app'
+          &nbsp;&nbsp;})
+          &nbsp;&lt;/script>
+        &lt;/body>
+        &lt;/html>
+      </pre>
+    </div>
   </div>
 </template>
 <script>
