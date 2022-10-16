@@ -37,4 +37,35 @@
   a {
     color: #0cb56c;
   }
+  fieldset{
+    border: none;
+    padding: 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 18px;
+    font-weight: 800;
+    legend{
+      margin-left: 20px;
+      padding: 0 10px;
+    }
+  }
+  table{
+    width: 100%;
+    margin-bottom: 20px;
+    tr{
+      text-align: left;
+      th{
+        padding: 8px 15px;
+        border-bottom: 1px solid #ddd;
+        color: #666;
+      }
+      td{
+        padding: 8px 15px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+      }
+    }
+  }
 }

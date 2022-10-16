@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { list1, list2 } from "@/assets/json/docLeftList.json";
+import { list1, list2 } from "@/assets/json/docLeftList.js";
 export default {
   name: "lefter",
   data() {

@@ -74,21 +74,21 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=template&id=47f05a28&
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/index.vue?vue&type=template&id=01a3a855&
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('button', {
     staticClass: "zvi-button",
-    class: [_vm.type ? 'zvi-button--' + _vm.type : '', _vm.buttonSize ? 'zvi-button--' + _vm.buttonSize : '', {
-      'is-disabled': _vm.buttonDisabled,
+    class: [_vm.type ? 'zvi-button--' + _vm.type : '', _vm.size ? 'zvi-button--' + _vm.size : '', {
+      'is-disabled': _vm.disabled,
       'is-loading': _vm.loading,
       'is-plain': _vm.plain,
       'is-round': _vm.round,
       'is-circle': _vm.circle
     }],
     attrs: {
-      "disabled": _vm.buttonDisabled || _vm.loading,
+      "disabled": _vm.disabled || _vm.loading,
       "autofocus": _vm.autofocus,
       "type": _vm.nativeType
     },
@@ -126,14 +126,6 @@ var staticRenderFns = [];
     autofocus: Boolean,
     round: Boolean,
     circle: Boolean
-  },
-  computed: {
-    buttonSize() {
-      return this.size;
-    },
-    buttonDisabled() {
-      return this.disabled;
-    }
   },
   methods: {
     handleClick(evt) {
@@ -261,6 +253,42 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var package_button = (component.exports);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/group.vue?vue&type=template&id=1f0e670c&
+var groupvue_type_template_id_1f0e670c_render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c('div', {
+    staticClass: "zvi-button-group"
+  }, [_vm._t("default")], 2);
+};
+var groupvue_type_template_id_1f0e670c_staticRenderFns = [];
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/button/group.vue?vue&type=script&lang=js&
+/* harmony default export */ var groupvue_type_script_lang_js_ = ({
+  name: "zvi-button-group"
+});
+;// CONCATENATED MODULE: ./src/package/button/group.vue?vue&type=script&lang=js&
+ /* harmony default export */ var button_groupvue_type_script_lang_js_ = (groupvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/package/button/group.vue
+
+
+
+
+
+/* normalize component */
+;
+var group_component = normalizeComponent(
+  button_groupvue_type_script_lang_js_,
+  groupvue_type_template_id_1f0e670c_render,
+  groupvue_type_template_id_1f0e670c_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var group = (group_component.exports);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/cli-service/node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/input/index.vue?vue&type=template&id=d9f4e9da&
 var inputvue_type_template_id_d9f4e9da_render = function render() {
   var _vm = this,
@@ -668,8 +696,9 @@ var input_component = normalizeComponent(
 
 
 
+
 // const eles = [Button]
-const coms = [package_button, input];
+const coms = [package_button, group, input];
 const install = function (Vue) {
   // eles.forEach(ele => {
   //   Vue.use(ele);

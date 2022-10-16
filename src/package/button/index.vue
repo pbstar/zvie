@@ -2,14 +2,14 @@
   <button
     class="zvi-button"
     @click="handleClick"
-    :disabled="buttonDisabled || loading"
+    :disabled="disabled || loading"
     :autofocus="autofocus"
     :type="nativeType"
     :class="[
       type ? 'zvi-button--' + type : '',
-      buttonSize ? 'zvi-button--' + buttonSize : '',
+      size ? 'zvi-button--' + size : '',
       {
-        'is-disabled': buttonDisabled,
+        'is-disabled': disabled,
         'is-loading': loading,
         'is-plain': plain,
         'is-round': round,
@@ -46,14 +46,6 @@ export default {
     autofocus: Boolean,
     round: Boolean,
     circle: Boolean,
-  },
-  computed: {
-    buttonSize() {
-      return this.size;
-    },
-    buttonDisabled() {
-      return this.disabled;
-    },
   },
 
   methods: {
