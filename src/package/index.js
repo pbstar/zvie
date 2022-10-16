@@ -16,4 +16,9 @@ const install = function (Vue) {
   });
 };
 
-export default install;
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
+export default {
+  install,zButton,zButtonGroup,zInput
+}

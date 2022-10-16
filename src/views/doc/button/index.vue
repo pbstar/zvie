@@ -21,45 +21,34 @@
         &lt;zvi-button type="danger">危险按钮&lt;/zvi-button>
       </pre>
     </div>
-    <zvi-button type="primary">默认按钮</zvi-button>
     <zvi-button type="primary" size="big">大型按钮</zvi-button>
+    <zvi-button type="primary">默认按钮</zvi-button>
     <zvi-button type="primary" size="small">小型按钮</zvi-button>
     <zvi-button type="primary" size="mini">超小按钮</zvi-button>
     <div class="code">
       <pre>
-        &lt;zvi-button plain>朴素按钮&lt;/zvi-button>
-        &lt;zvi-button type="primary" plain>主要按钮&lt;/zvi-button>
-        &lt;zvi-button type="success" plain>成功按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" size="big">大型按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary">默认按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" size="small">小型按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" size="mini">超小按钮&lt;/zvi-button>
       </pre>
     </div>
-    <zvi-button plain>朴素按钮</zvi-button>
-    <zvi-button type="primary" plain>主要按钮</zvi-button>
-    <zvi-button type="success" plain>成功按钮</zvi-button>
+    <zvi-button type="primary" plain>朴素按钮</zvi-button>
     <div class="code">
       <pre>
-        &lt;zvi-button plain>朴素按钮&lt;/zvi-button>
-        &lt;zvi-button type="primary" plain>主要按钮&lt;/zvi-button>
-        &lt;zvi-button type="success" plain>成功按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" plain>朴素按钮&lt;/zvi-button>
       </pre>
     </div>
-    <zvi-button round>圆角按钮</zvi-button>
-    <zvi-button type="primary" round>主要按钮</zvi-button>
-    <zvi-button type="success" round>成功按钮</zvi-button>
+    <zvi-button type="primary" round>圆角按钮</zvi-button>
     <div class="code">
       <pre>
-        &lt;zvi-button round>圆角按钮&lt;/zvi-button>
-        &lt;zvi-button type="primary" round>主要按钮&lt;/zvi-button>
-        &lt;zvi-button type="success" round>成功按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" round>圆角按钮&lt;/zvi-button>
       </pre>
     </div>
-    <zvi-button disabled>禁用状态</zvi-button>
-    <zvi-button type="primary" disabled>主要按钮</zvi-button>
-    <zvi-button type="success" disabled>成功按钮</zvi-button>
+    <zvi-button type="primary" disabled>禁用状态</zvi-button>
     <div class="code">
       <pre>
-        &lt;zvi-button disabled>禁用状态&lt;/zvi-button>
-        &lt;zvi-button type="primary" disabled>主要按钮&lt;/zvi-button>
-        &lt;zvi-button type="success" disabled>成功按钮&lt;/zvi-button>
+        &lt;zvi-button type="primary" disabled>禁用状态&lt;/zvi-button>
       </pre>
     </div>
     <zvi-button type="primary" icon="zvi-icon-edit">图标按钮</zvi-button>
@@ -119,10 +108,66 @@
       </tr>
       <tr>
         <td>type</td>
+        <td>类型</td>
+        <td>string</td>
+        <td>primary / success / warning / danger / info / text</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>type</td>
         <td>尺寸</td>
         <td>string</td>
-        <td>big/small/mini</td>
+        <td>big / small / mini</td>
         <td>—</td>
+      </tr>
+      <tr>
+        <td>icon</td>
+        <td>图标类名</td>
+        <td>string</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>plain</td>
+        <td>是否朴素按钮</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>round</td>
+        <td>是否圆角按钮</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>circle</td>
+        <td>是否圆形按钮</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>loading</td>
+        <td>是否加载中状态</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>是否禁用状态</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>autofocus</td>
+        <td>是否默认聚焦</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
       </tr>
     </table>
   </div>

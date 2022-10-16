@@ -11247,12 +11247,12 @@ to {
 	border-color:#e9e9eb
 }
 .zvi-button--big {
-	padding:16px 24px 15px;
-	font-size:16px;
+	padding:15px 25px 14px;
+	font-size:15px;
 	border-radius:4px
 }
 .zvi-button--big.is-circle {
-	padding:16px
+	padding:15px
 }
 .zvi-button--small {
 	padding:6px 9px 7px;

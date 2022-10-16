@@ -697,7 +697,15 @@ const install = function (Vue) {
     Vue.component(com.name, com);
   });
 };
-/* harmony default export */ var src_package = (install);
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
+/* harmony default export */ var src_package = ({
+  install,
+  zButton: package_button,
+  zButtonGroup: group,
+  zInput: input
+});
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
