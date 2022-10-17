@@ -1,5 +1,5 @@
 
-let list1=[
+let list1 = [
   {
     name: "docInstall",
     text: "Npm 安装",
@@ -11,7 +11,7 @@ let list1=[
     url: "/doc/introduce"
   }
 ]
-let list2=[
+let list2 = [
   {
     name: "docButton",
     text: "Button 按钮",
@@ -73,6 +73,13 @@ let list2=[
     url: "/doc/pageFooter"
   }
 ]
+let list3 = [
+  {
+    name: "docVideo",
+    text: "Video 视频",
+    url: "/doc/video"
+  }
+]
 export {
-  list1,list2
+  list1, list2, list3
 }

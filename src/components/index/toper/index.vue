@@ -6,59 +6,34 @@
     </div>
     <div class="bright">
       <el-popover placement="bottom" width="220" trigger="click">
-        <div
-          style="
+        <div style="
             display: flex;
             flex-direction: column;
             height: 168px;
             overflow-y: auto;
-          "
-        >
-          <router-link
-            v-for="(item, index) in list"
-            :key="index"
-            :to="item.url"
-            style="
+          ">
+          <router-link v-for="(item, index) in list" :key="index" :to="item.url" style="
               color: #888;
               font-size: 15px;
               line-height: 26px;
               margin: 2px 5px 3px 0;
               padding: 3px 8px;
               border-radius: 5px;
-            "
-            class="z_global_1"
-          >
-            {{ item.text }}</router-link
-          >
-          <el-empty
-            v-show="list.length == 0"
-            description="未查询到数据"
-            :image-size="44"
-          ></el-empty>
+            " class="z_global_1">
+            {{ item.text }}</router-link>
+          <el-empty v-show="list.length == 0" description="未查询到数据" :image-size="44"></el-empty>
         </div>
-        <input
-          v-show="pName == 'doc'"
-          type="text"
-          slot="reference"
-          placeholder="搜索文档"
-          @input="toSearch"
-          v-model="input"
-        />
+        <input v-show="pName == 'doc'" type="text" slot="reference" placeholder="搜索文档" @input="toSearch"
+          v-model="input" />
       </el-popover>
-      <router-link
-        to="/doc/install"
-        :class="pName == 'doc' ? 'activeLink' : 'link'"
-        >文档</router-link
-      >
-      <router-link to="/blog" :class="pName == 'blog' ? 'activeLink' : 'link'"
-        >博客</router-link
-      >
+      <router-link to="/doc/install" :class="pName == 'doc' ? 'activeLink' : 'link'">文档</router-link>
+      <router-link to="/blog" :class="pName == 'blog' ? 'activeLink' : 'link'">博客</router-link>
     </div>
   </div>
 </template>
   
 <script>
-import { list1, list2 } from "@/assets/json/docLeftList.js";
+import { list1, list2, list3 } from "@/assets/json/docLeftList.js";
 export default {
   name: "toper",
   data() {
@@ -87,7 +62,7 @@ export default {
     },
   },
   created() {
-    this.allList = this.allList.concat(list1).concat(list2);
+    this.allList = this.allList.concat(list1).concat(list2).concat(list3);
     this.list = this.allList;
   },
   methods: {
@@ -152,6 +127,7 @@ export default {
       color: #555;
       margin-left: 30px;
     }
+
     .activeLink {
       margin-left: 30px;
       color: #0cb56c;

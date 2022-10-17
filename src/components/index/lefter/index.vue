@@ -1,32 +1,26 @@
 <template>
   <div class="box">
     <h4>开发指南</h4>
-    <router-link
-      v-for="(item, index) in list1"
-      :key="index + 'l1'"
-      :to="item.url"
-      :class="$route.name == item.name ? 'activeLink' : 'link'"
-      >{{ item.text }}</router-link
-    >
+    <router-link v-for="(item, index) in list1" :key="index + 'l1'" :to="item.url"
+      :class="$route.name == item.name ? 'activeLink' : 'link'">{{ item.text }}</router-link>
     <h4>基础组件</h4>
-    <router-link
-      v-for="(item, index) in list2"
-      :key="index + 'l2'"
-      :to="item.url"
-      :class="$route.name == item.name ? 'activeLink' : 'link'"
-      >{{ item.text }}</router-link
-    >
+    <router-link v-for="(item, index) in list2" :key="index + 'l2'" :to="item.url"
+      :class="$route.name == item.name ? 'activeLink' : 'link'">{{ item.text }}</router-link>
+    <h4>高级组件</h4>
+    <router-link v-for="(item, index) in list3" :key="index + 'l3'" :to="item.url"
+      :class="$route.name == item.name ? 'activeLink' : 'link'">{{ item.text }}</router-link>
   </div>
 </template>
 
 <script>
-import { list1, list2 } from "@/assets/json/docLeftList.js";
+import { list1, list2, list3 } from "@/assets/json/docLeftList.js";
 export default {
   name: "lefter",
   data() {
     return {
       list1,
       list2,
+      list3
     };
   },
 };
