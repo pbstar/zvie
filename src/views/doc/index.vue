@@ -1,6 +1,9 @@
 <template>
   <div class="box">
-    <Lefter class="bleft" v-show="!isLeftFixed"></Lefter>
+    <Lefter
+      :class="isLeftFixed ? 'bleftFlex' : 'bleft'"
+      :style="isLeftFixed ? 'height:' + leftH + 'px' : ''"
+    ></Lefter>
     <div class="blMer" v-show="isLeftFixed"></div>
     <router-view class="bright" />
   </div>
@@ -15,24 +18,31 @@ export default {
   },
   data() {
     return {
-      isLeftFixed: false
-    }
+      isLeftFixed: false,
+      leftH: 0,
+    };
   },
   mounted() {
-    window.addEventListener("scroll", this.throttle(this.handleScroll, 50), false)
+    window.addEventListener(
+      "scroll",
+      this.throttle(this.handleScroll, 10),
+      false
+    );
   },
   methods: {
     handleScroll() {
-      let showH = document.documentElement.clientHeight
-      let showT = parseInt(document.documentElement.scrollTop)
-      let zHeight = document.body.scrollHeight
-      console.log(showH, showT, zHeight);
-      if (showT > 68) {
-        this.isLeftFixed = true
-      } else if () {
-        this.isLeftFixed = false
+      let showH = document.documentElement.clientHeight;
+      let showT = parseInt(document.documentElement.scrollTop);
+      let zHeight = document.body.scrollHeight;
+      if (showT < 68) {
+        this.isLeftFixed = false;
       } else {
-
+        if (showH + showT + 100 > zHeight) {
+          this.leftH = zHeight - showT - 100;
+        } else {
+          this.leftH = showH;
+        }
+        this.isLeftFixed = true;
       }
     },
 
@@ -45,11 +55,11 @@ export default {
           timer = setTimeout(function () {
             fn.apply(context, args);
             timer = null;
-          }, wait)
+          }, wait);
         }
-      }
+      };
     },
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -57,21 +67,26 @@ export default {
   width: 1200px;
   margin: 0 auto;
   display: flex;
-  // justify-content: space-between;
 
   .bleft {
-    width: 180px;
-    // position: fixed;
+    width: 200px;
+    padding-right: 20px;
+  }
+  .bleftFlex {
+    width: 200px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
   }
 
   .blMer {
-    width: 180px;
+    width: 200px;
   }
 
   .bright {
     width: 1000px;
     padding: 30px 0 30px 20px;
-    margin-left: 20px;
     border-left: 1px solid #eee;
   }
 }
