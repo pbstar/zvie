@@ -1,9 +1,6 @@
 <template>
   <div class="box">
-    <Lefter
-      :class="isLeftFixed ? 'bleftFlex' : 'bleft'"
-      :style="isLeftFixed ? 'height:' + leftH + 'px' : ''"
-    ></Lefter>
+    <Lefter :class="isLeftFixed ? 'bleftFlex' : 'bleft'" :style="isLeftFixed ? 'height:' + leftH + 'px' : ''"></Lefter>
     <div class="blMer" v-show="isLeftFixed"></div>
     <router-view class="bright" />
   </div>
@@ -72,6 +69,7 @@ export default {
     width: 200px;
     padding-right: 20px;
   }
+
   .bleftFlex {
     width: 200px;
     padding-right: 20px;
@@ -82,6 +80,7 @@ export default {
 
   .blMer {
     width: 200px;
+    height: calc(100vh - 68px);
   }
 
   .bright {
