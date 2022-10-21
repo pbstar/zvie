@@ -15,7 +15,7 @@ export default {
     },
     url: {
       type: String,
-      default: "//oss.mcweb.club/video/xgplayer.mp4",
+      default: "http://oss.mcweb.club/video/xgplayer.mp4",
     },
     width: {
       type: [String, Number],
@@ -47,7 +47,7 @@ export default {
     },
     poster: {
       type: String,
-      default: "//oss.mcweb.club/img/zvie/xgplayer.jpg",
+      default: "http://oss.mcweb.club/img/zvie/xgplayer.jpg",
     },
     playbackRate: {
       type: Array,

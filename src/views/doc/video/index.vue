@@ -34,7 +34,7 @@
         <td>视频资源地址</td>
         <td>string</td>
         <td>—</td>
-        <td>//oss.mcweb.club/<br />video/xgplayer.mp4</td>
+        <td>http://oss.mcweb.club/<br />video/xgplayer.mp4</td>
       </tr>
       <tr>
         <td>directInit</td>
@@ -48,7 +48,7 @@
         <td>播放器的封面</td>
         <td>string</td>
         <td>—</td>
-        <td>//oss.mcweb.club/img<br />/zvie/xgplayer.jpg</td>
+        <td>http://oss.mcweb.club/img<br />/zvie/xgplayer.jpg</td>
       </tr>
       <tr>
         <td>width</td>

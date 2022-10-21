@@ -1,6 +1,6 @@
 {
   "name": "zvie",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Zvie 是一套基于 Vue 的基础样式组件库。",
   "main": "lib/zvie.common.js",
   "scripts": {
