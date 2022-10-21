@@ -15,7 +15,7 @@ export default {
     },
     url: {
       type: String,
-      default: "http://oss.mcweb.club/video/xgplayer.mp4",
+      default: "https://pbstar.github.io/videos/xgplayer.mp4",
     },
     width: {
       type: [String, Number],
@@ -47,7 +47,7 @@ export default {
     },
     poster: {
       type: String,
-      default: "http://oss.mcweb.club/img/zvie/xgplayer.jpg",
+      default: "https://pbstar.github.io/images/xgplayer.jpg",
     },
     playbackRate: {
       type: Array,
@@ -123,7 +123,6 @@ export default {
         this.$emit('timechange', e.currentTime.toFixed(2))
       })
       this.player.on('volumechange', (e) => {
-        console.log('shengyin', e.volume.toFixed(2));
         this.$emit('volumechange', e.volume.toFixed(2))
       })
       this.player.on('requestFullscreen', () => {

@@ -3600,8 +3600,8 @@ var input_component = normalizeComponent(
 )
 
 /* harmony default export */ var input = (input_component.exports);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/video/index.vue?vue&type=template&id=0190b426&scoped=true&
-var videovue_type_template_id_0190b426_scoped_true_render = function render() {
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/package/video/index.vue?vue&type=template&id=18883328&scoped=true&
+var videovue_type_template_id_18883328_scoped_true_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', [_c('div', {
@@ -3610,7 +3610,7 @@ var videovue_type_template_id_0190b426_scoped_true_render = function render() {
     }
   })]);
 };
-var videovue_type_template_id_0190b426_scoped_true_staticRenderFns = [];
+var videovue_type_template_id_18883328_scoped_true_staticRenderFns = [];
 
 // EXTERNAL MODULE: ./node_modules/xgplayer/dist/index.js
 var dist = __webpack_require__(8524);
@@ -3626,7 +3626,7 @@ var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
     },
     url: {
       type: String,
-      default: "http://oss.mcweb.club/video/xgplayer.mp4"
+      default: "https://pbstar.github.io/videos/xgplayer.mp4"
     },
     width: {
       type: [String, Number],
@@ -3658,7 +3658,7 @@ var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
     },
     poster: {
       type: String,
-      default: "http://oss.mcweb.club/img/zvie/xgplayer.jpg"
+      default: "https://pbstar.github.io/images/xgplayer.jpg"
     },
     playbackRate: {
       type: Array,
@@ -3744,7 +3744,6 @@ var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
         this.$emit('timechange', e.currentTime.toFixed(2));
       });
       this.player.on('volumechange', e => {
-        console.log('shengyin', e.volume.toFixed(2));
         this.$emit('volumechange', e.volume.toFixed(2));
       });
       this.player.on('requestFullscreen', () => {
@@ -3803,11 +3802,11 @@ var dist_default = /*#__PURE__*/__webpack_require__.n(dist);
 ;
 var video_component = normalizeComponent(
   package_videovue_type_script_lang_js_,
-  videovue_type_template_id_0190b426_scoped_true_render,
-  videovue_type_template_id_0190b426_scoped_true_staticRenderFns,
+  videovue_type_template_id_18883328_scoped_true_render,
+  videovue_type_template_id_18883328_scoped_true_staticRenderFns,
   false,
   null,
-  "0190b426",
+  "18883328",
   null
   
 )
