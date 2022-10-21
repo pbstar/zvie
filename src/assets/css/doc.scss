@@ -9,7 +9,8 @@
     line-height: 28px;
     margin-bottom: 20px;
     margin-top: 15px;
-    pre{
+
+    pre {
       white-space: pre-line;
     }
   }
@@ -37,34 +38,47 @@
   a {
     color: #0cb56c;
   }
-  fieldset{
+
+  fieldset {
     border: none;
     padding: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
     margin-bottom: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: #666;
     font-size: 18px;
     font-weight: 800;
-    legend{
+
+    legend {
       margin-left: 20px;
       padding: 0 10px;
     }
   }
-  table{
+
+  table {
     width: 100%;
     margin-bottom: 20px;
-    tr{
+
+    tr {
       text-align: left;
-      th{
+      text-overflow: ellipsis;
+
+      th {
         padding: 8px 15px;
         border-bottom: 1px solid #ddd;
         color: #666;
       }
-      td{
+
+      td {
         padding: 8px 15px;
         border-bottom: 1px solid #eee;
         font-size: 14px;
+      }
+    }
+
+    tr:last-child {
+      td {
+        border-bottom: 1px solid #ddd;
       }
     }
   }
