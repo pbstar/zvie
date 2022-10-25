@@ -4,9 +4,10 @@ import zButton from "./button";
 import zButtonGroup from "./button/group";
 import zInput from "./input";
 import zVideo from "./video";
+import zVerification from "./verification";
 
 // var eles = [Button]
-var coms = [zButton, zButtonGroup, zInput, zVideo];
+var coms = [zButton, zButtonGroup, zInput, zVideo, zVerification];
 
 var install = function (Vue) {
   let obj = { install }

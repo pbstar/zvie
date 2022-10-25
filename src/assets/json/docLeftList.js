@@ -78,6 +78,10 @@ let list3 = [
     name: "docVideo",
     text: "Video 视频",
     url: "/doc/video"
+  }, {
+    name: "docVerification",
+    text: "Verification 验证码",
+    url: "/doc/verification"
   }
 ]
 export {

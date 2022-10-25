@@ -1,46 +1,28 @@
 <template>
-  <div
-    :class="[
-      type === 'textarea' ? 'zvi-textarea' : 'zvi-input',
-      inputSize ? 'zvi-input--' + inputSize : '',
-      {
-        'is-disabled': inputDisabled,
-        'is-exceed': inputExceed,
-        'zvi-input-group': $slots.prepend || $slots.append,
-        'zvi-input-group--append': $slots.append,
-        'zvi-input-group--prepend': $slots.prepend,
-        'zvi-input--prefix': $slots.prefix || prefixIcon,
-        'zvi-input--suffix':
-          $slots.suffix || suffixIcon || clearable || showPassword,
-      },
-    ]"
-    @mouseenter="hovering = true"
-    @mouseleave="hovering = false"
-  >
+  <div :class="[
+    type === 'textarea' ? 'zvi-textarea' : 'zvi-input',
+    inputSize ? 'zvi-input--' + inputSize : '',
+    {
+      'is-disabled': inputDisabled,
+      'is-exceed': inputExceed,
+      'zvi-input-group': $slots.prepend || $slots.append,
+      'zvi-input-group--append': $slots.append,
+      'zvi-input-group--prepend': $slots.prepend,
+      'zvi-input--prefix': $slots.prefix || prefixIcon,
+      'zvi-input--suffix':
+        $slots.suffix || suffixIcon || clearable || showPassword,
+    },
+  ]" @mouseenter="hovering = true" @mouseleave="hovering = false">
     <template v-if="type !== 'textarea'">
       <!-- 前置元素 -->
       <div class="zvi-input-group__prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
       </div>
-      <input
-        :tabindex="tabindex"
-        v-if="type !== 'textarea'"
-        class="zvi-input__inner"
-        v-bind="$attrs"
-        :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
-        :disabled="inputDisabled"
-        :readonly="readonly"
-        :autocomplete="autocomplete"
-        ref="input"
-        @compositionstart="handleCompositionStart"
-        @compositionupdate="handleCompositionUpdate"
-        @compositionend="handleCompositionEnd"
-        @input="handleInput"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @change="handleChange"
-        :aria-label="label"
-      />
+      <input :tabindex="tabindex" v-if="type !== 'textarea'" class="zvi-input__inner" v-bind="$attrs"
+        :type="showPassword ? (passwordVisible ? 'text' : 'password') : type" :disabled="inputDisabled"
+        :readonly="readonly" :autocomplete="autocomplete" ref="input" @compositionstart="handleCompositionStart"
+        @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput"
+        @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label" />
       <!-- 前置内容 -->
       <span class="zvi-input__prefix" v-if="$slots.prefix || prefixIcon">
         <slot name="prefix"></slot>
@@ -54,28 +36,17 @@
             <i class="zvi-input__icon" v-if="suffixIcon" :class="suffixIcon">
             </i>
           </template>
-          <i
-            v-if="showClear"
-            class="zvi-input__icon zvi-icon-circle-close zvi-input__clear"
-            @mousedown.prevent
-            @click="clear"
-          ></i>
-          <i
-            v-if="showPwdVisible"
-            class="zvi-input__icon zvi-icon-view zvi-input__clear"
-            @click="handlePasswordVisible"
-          ></i>
+          <i v-if="showClear" class="zvi-input__icon zvi-icon-circle-close zvi-input__clear" @mousedown.prevent
+            @click="clear"></i>
+          <i v-if="showPwdVisible" class="zvi-input__icon zvi-icon-view zvi-input__clear"
+            @click="handlePasswordVisible"></i>
           <span v-if="isWordLimitVisible" class="zvi-input__count">
             <span class="zvi-input__count-inner">
               {{ textLength }}/{{ upperLimit }}
             </span>
           </span>
         </span>
-        <i
-          class="zvi-input__icon"
-          v-if="validateState"
-          :class="['zvi-input__validateIcon', validateIcon]"
-        >
+        <i class="zvi-input__icon" v-if="validateState" :class="['zvi-input__validateIcon', validateIcon]">
         </i>
       </span>
       <!-- 后置元素 -->
@@ -83,31 +54,13 @@
         <slot name="append"></slot>
       </div>
     </template>
-    <textarea
-      v-else
-      :tabindex="tabindex"
-      class="zvi-textarea__inner"
-      @compositionstart="handleCompositionStart"
-      @compositionupdate="handleCompositionUpdate"
-      @compositionend="handleCompositionEnd"
-      @input="handleInput"
-      ref="textarea"
-      v-bind="$attrs"
-      :disabled="inputDisabled"
-      :readonly="readonly"
-      :autocomplete="autocomplete"
-      :style="textareaStyle"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @change="handleChange"
-      :aria-label="label"
-    >
+    <textarea v-else :tabindex="tabindex" class="zvi-textarea__inner" @compositionstart="handleCompositionStart"
+      @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput"
+      ref="textarea" v-bind="$attrs" :disabled="inputDisabled" :readonly="readonly" :autocomplete="autocomplete"
+      :style="textareaStyle" @focus="handleFocus" @blur="handleBlur" @change="handleChange" :aria-label="label">
     </textarea>
-    <span
-      v-if="isWordLimitVisible && type === 'textarea'"
-      class="zvi-input__count"
-      >{{ textLength }}/{{ upperLimit }}</span
-    >
+    <span v-if="isWordLimitVisible && type === 'textarea'" class="zvi-input__count">{{ textLength }}/{{ upperLimit
+    }}</span>
   </div>
 </template>
 
@@ -232,7 +185,6 @@ export default {
       return (this.value || "").length;
     },
     inputExceed() {
-      // show exceed style if length of initial value greater then maxlength
       return this.isWordLimitVisible && this.textLength > this.upperLimit;
     },
   },
@@ -244,15 +196,9 @@ export default {
         this.dispatch("ElFormItem", "el.form.change", [val]);
       }
     },
-    // native input value is set explicitly
-    // do not use v-model / :value in template
-    // see: https://github.com/ElemeFE/element/issues/14521
     nativeInputValue() {
       this.setNativeInputValue();
     },
-    // when change between <input> and <textarea>,
-    // update DOM dependent value and styles
-    // https://github.com/ElemeFE/element/issues/14857
     type() {
       this.$nextTick(() => {
         this.setNativeInputValue();
@@ -337,18 +283,10 @@ export default {
       }
     },
     handleInput(event) {
-      // should not emit input during composition
-      // see: https://github.com/ElemeFE/element/issues/10516
       if (this.isComposing) return;
-
-      // hack for https://github.com/ElemeFE/element/issues/8548
-      // should remove the following line when we don't support IE
       if (event.target.value === this.nativeInputValue) return;
 
       this.$emit("input", event.target.value);
-
-      // ensure native input value is controlled
-      // see: https://github.com/ElemeFE/element/issues/12850
       this.$nextTick(this.setNativeInputValue);
     },
     handleChange(event) {
@@ -374,9 +312,8 @@ export default {
 
       const pendant = pendantMap[place];
       if (this.$slots[pendant]) {
-        el.style.transform = `translateX(${place === "suffix" ? "-" : ""}${
-          this.$el.querySelector(`.zvi-input-group__${pendant}`).offsetWidth
-        }px)`;
+        el.style.transform = `translateX(${place === "suffix" ? "-" : ""}${this.$el.querySelector(`.zvi-input-group__${pendant}`).offsetWidth
+          }px)`;
       } else {
         el.removeAttribute("style");
       }

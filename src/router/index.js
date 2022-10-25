@@ -7,6 +7,7 @@ import docButton from "../views/doc/button";
 import docInput from "../views/doc/input";
 import docPageFooter from "../views/doc/pageFooter";
 import docVideo from "../views/doc/video";
+import docVerification from "../views/doc/verification";
 import doc404 from "../views/doc/404";
 
 import blog from "../views/blog";
@@ -51,6 +52,10 @@ const routes = [
         path: "video",
         name: "docVideo",
         component: docVideo,
+      }, {
+        path: "verification",
+        name: "docVerification",
+        component: docVerification,
       }, {
         path: "*",
         name: "doc404",
