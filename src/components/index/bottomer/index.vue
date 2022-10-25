@@ -1,7 +1,8 @@
 <template>
   <div class="box">
-    <div class="bleft">Copyright © 2022 <a href="https://pbstar.github.io/zvie/" target="_blank">Zvie</a> / <a
-        href="https://element.eleme.cn/" target="_blank">Element</a> .</div>
+    <!-- <div class="bleft">Copyright © 2022 <a href="https://pbstar.github.io/zvie/" target="_blank">Zvie</a> / <a
+        href="https://element.eleme.cn/" target="_blank">Element</a> .</div> -->
+    <div class="bleft">Copyright © 2022 Zvie .</div>
     <div class="bright">
       <div class="brbox">
         <img class="bricon" src="../../../assets/icon/github.png" @click="toGithub" alt="" />

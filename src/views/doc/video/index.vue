@@ -75,7 +75,25 @@
         <td>fitVideoSize</td>
         <td>自适应视频内容</td>
         <td>string</td>
-        <td>fixWidth / fixHeight</td>
+        <td>
+          <el-popover placement="bottom" width="200" trigger="hover">
+            <div slot="reference">fixWidth / fixHeight</div>
+            <table>
+              <tr>
+                <th style="width: 70px;">参数</th>
+                <th>说明</th>
+              </tr>
+              <tr>
+                <td>fixWidth</td>
+                <td>容器宽度固定，高度按照视频内容比例变化</td>
+              </tr>
+              <tr>
+                <td>fixHeight</td>
+                <td>容器高度固定，宽度按照视频内容比例变化</td>
+              </tr>
+            </table>
+          </el-popover>
+        </td>
         <td>—</td>
       </tr>
       <tr>
@@ -125,7 +143,57 @@
         <td>播放器关闭的内置控件</td>
         <td>array</td>
         <td>
-          ['time','definition',<br />'fullscreen','loading',<br />'play','pip','error',<br />'progress','replay',<br />'volume'.'poster']
+          <el-popover placement="bottom" width="200" trigger="hover">
+            <div slot="reference">
+              ['time','loading',<br />'fullscreen','pip',<br />'play','error',<br />'progress','replay',<br />'volume'.'poster']
+            </div>
+            <table>
+              <tr>
+                <th style="width: 70px;">参数</th>
+                <th>说明</th>
+              </tr>
+              <tr>
+                <td>time</td>
+                <td>当前播放时间/视频时长</td>
+              </tr>
+              <tr>
+                <td>fullscreen</td>
+                <td>全屏切换</td>
+              </tr>
+              <tr>
+                <td>error</td>
+                <td>报错提示</td>
+              </tr>
+              <tr>
+                <td>loading</td>
+                <td>加载提示</td>
+              </tr>
+              <tr>
+                <td>play</td>
+                <td>控制条的播放、暂停按钮</td>
+              </tr>
+              <tr>
+                <td>poster</td>
+                <td>封面图插件</td>
+              </tr>
+              <tr>
+                <td>progress</td>
+                <td>视频进度条</td>
+              </tr>
+              <tr>
+                <td>replay</td>
+                <td>重播交互与提示</td>
+              </tr>
+              <tr>
+                <td>volume</td>
+                <td>音量控制</td>
+              </tr>
+              <tr>
+                <td>pip</td>
+                <td>画中画</td>
+              </tr>
+            </table>
+          </el-popover>
         </td>
         <td>['pip']</td>
       </tr>
@@ -212,7 +280,7 @@
       <tr>
         <td>playbackratechange</td>
         <td>播放速度变化</td>
-        <td>改变前后速度{form:1,to:1.5}</td>
+        <td>改变前后速度 {form:1,to:1.5}</td>
       </tr>
     </table>
   </div>
