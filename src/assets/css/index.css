@@ -34,3 +34,7 @@ textarea {
   border-radius: 10px;
   background: #ccc;
 }
+
+#zvie_base_loading {
+  display: none;
+}

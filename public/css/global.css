@@ -2,3 +2,34 @@
   color: #0cb56c !important;
   background-color: rgb(246, 246, 246);
 }
+
+.base_loading_progress {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) 0/20%;
+  background:
+    linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+  animation: p4 2s infinite steps(6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.base_loading_bj {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.2s ease-in;
+  transition-property: background-color;
+}
+
+@keyframes p4 {
+  100% {
+    background-size: 120%
+  }
+}
