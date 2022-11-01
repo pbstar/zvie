@@ -67,10 +67,9 @@ export default {
   },
   methods: {
     toSearch() {
-      console.log(this.input);
       if (this.input) {
         this.list = [];
-        var reg = new RegExp(this.input);
+        var reg = new RegExp(this.input, 'i');
         for (var i = 0; i < this.allList.length; i++) {
           if (this.allList[i].text.match(reg)) {
             this.list.push(this.allList[i]);
