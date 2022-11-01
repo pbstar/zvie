@@ -21,6 +21,10 @@ export default {
     Toper,
     Bottomer,
   },
+  mounted() {
+    let loading = document.getElementById("zvie_base_loading");
+    loading.style.display = 'none'
+  }
 };
 </script>
 <style lang="scss" scoped>
