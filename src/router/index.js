@@ -5,6 +5,7 @@ import docInstall from "../views/doc/install";
 import docIntroduce from "../views/doc/introduce";
 import docButton from "../views/doc/button";
 import docInput from "../views/doc/input";
+import docIcon from "../views/doc/icon";
 import docPageFooter from "../views/doc/pageFooter";
 import docVideo from "../views/doc/video";
 import docVerification from "../views/doc/verification";
@@ -44,6 +45,10 @@ const routes = [
         path: "input",
         name: "docInput",
         component: docInput,
+      }, {
+        path: "icon",
+        name: "docIcon",
+        component: docIcon,
       }, {
         path: "pageFooter",
         name: "docPageFooter",

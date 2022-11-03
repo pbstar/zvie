@@ -13,6 +13,11 @@ let list1 = [
 ]
 let list2 = [
   {
+    name: "docIcon",
+    text: "Icon 图标",
+    url: "/doc/icon"
+  },
+  {
     name: "docButton",
     text: "Button 按钮",
     url: "/doc/button"
